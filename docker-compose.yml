@@ -1,35 +1,33 @@
 version: '3.7'
 
-services: 
+services:
 
-    arachni:
 
-        build: .
-        command: bash -c "sleep 10 && entrypoint.sh"
-        environment:
-          DB_ADAPTER: postgresql
-          DB_HOST: postgres
-          DB_NAME: arachni
-          DB_USER: adminweb
-          DB_PASS: webapp
-        ports:
-          - 7331:7331
-          - 9292:9292
-          - 22:22
+    webgoat:
 
-        depends_on:
-          - postgres
-    
-    postgres:
-
-        image: postgres:9.6
-        restart: always
-        environment: 
-            - POSTGRES_DB:'arachni'
-            - POSTGRES_USER:'adminweb'
-            - POSTGRES_PASSWORD:'webapp'
-            - PGDATA:'/var/lib/postgresql/data/pgdata'
-        volumes: 
-            - $PWD/data/:/var/lib/postgresql/data/pgdata
+        container_name: webgoat
+        image: webgoat/webgoat-8.0
         ports: 
-            - 5432:5432
+            - 8080:8080
+    
+    dvwap:
+
+        container_name: dvwap
+        image: vulnerables/web-dvwa
+        ports: 
+            - 8081:80
+    
+    
+    bwapp:
+
+        container_name: bwapp
+        image: feltsecure/owasp-bwapp
+        ports: 
+            - 8082:80
+    
+    shop:
+
+        container_name: juiceshop
+        image: bkimminich/juice-shop
+        ports: 
+            - 8083:3000
