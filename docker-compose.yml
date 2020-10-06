@@ -31,3 +31,9 @@ services:
         image: bkimminich/juice-shop
         ports: 
             - 8083:3000
+            
+    bricks:
+        container_name: bricks
+        image: citizenstig/owaspbricks
+        ports: 
+            - 8080:80

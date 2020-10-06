@@ -50,5 +50,22 @@ webgoat     java -Djava.security.egd=f ...   Up      0.0.0.0:8080->8080/tcp
 'docker-compose stop or docker-compose down'
 
 
+## Docker Install
+
+To run Railsgoat with Docker you must first have Docker and Docker Compose installed. Once those dependencies are installed, cd into the Railsgoat directory where you've cloned the code and run. Rails requires Compose 1.6.0 or above and require a Docker Engine of version 1.10.0 or above.
+
+```bash
+#~/code/railsgoat
+$ docker-compose build
+$ docker-compose run web rails db:setup
+$ docker-compose up
+...
+  Creating railsgoat_web_1
+  Attaching to railsgoat_web_1
+$
+```
+Once you see the preceeding message Railsgoat is running on your localhost on port 3000.
+
+
 
 
