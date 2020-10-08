@@ -36,4 +36,10 @@ services:
         container_name: bricks
         image: citizenstig/owaspbricks
         ports: 
-            - 8080:80
+            - 8083:80
+    owasp:
+        container_name: owasp17
+        image: bltsec/mutillidae-docker
+        ports: 
+            - 80:80
+            - 443:443
