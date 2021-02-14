@@ -67,5 +67,7 @@ $
 Once you see the preceeding message Railsgoat is running on your localhost on port 3000.
 
 
+## Contributors
 
+Design: @onahump / https://github.com/onahump
 
