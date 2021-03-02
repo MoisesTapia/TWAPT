@@ -11,10 +11,11 @@
 - [X] docker-compose
 
 ## Webs
- - [X] Webgoat: localhost:8080/WebGoat
- - [X] DVWAP: localhost:8081
- - [X] bwapp: localhost:8082/install.php
- - [X] Juice-Shop: localhost:8083
+ - [X] Webgoat    : localhost:8080/WebGoat
+ - [X] Mutillidae : localhost:8088/mutillidae
+ - [X] DVWAP      : localhost:8081
+ - [X] bwapp      : localhost:8082/install.php
+ - [X] Juice-Shop : localhost:8083
 
 ## Usage mode.
 

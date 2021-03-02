@@ -7,39 +7,61 @@ services:
 
         container_name: webgoat
         image: webgoat/webgoat-8.0
+        restart: on-failure
         ports: 
             - 8080:8080
+        networks: 
+            - pentesting
     
     dvwap:
 
         container_name: dvwap
         image: vulnerables/web-dvwa
+        restart: on-failure
         ports: 
             - 8081:80
-    
+        networks: 
+            - pentesting
     
     bwapp:
 
         container_name: bwapp
         image: feltsecure/owasp-bwapp
+        restart: on-failure
         ports: 
             - 8082:80
+        networks: 
+            - pentesting
     
     shop:
 
         container_name: juiceshop
         image: bkimminich/juice-shop
+        restart: on-failure
         ports: 
             - 8083:3000
+        networks: 
+            - pentesting
             
     bricks:
         container_name: bricks
         image: citizenstig/owaspbricks
+        restart: on-failure
         ports: 
-            - 8083:80
+            - 8084:80
+        networks: 
+            - pentesting
+    
     owasp:
         container_name: owasp17
         image: bltsec/mutillidae-docker
+        restart: on-failure
         ports: 
-            - 80:80
+            - 8088:80
             - 443:443
+        networks: 
+            - pentesting
+
+networks:
+    pentesting:
+        driver: bridge
