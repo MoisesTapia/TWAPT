@@ -1,0 +1,15 @@
+services:
+  - docker
+
+before_install:
+  - docker pull l505/vulnerablewordpress
+  - docker pull opendns/security-ninjas
+  - docker pull webgoat/webgoat-8.0
+  - docker pull vulnerables/web-dvwa
+  - docker pull feltsecure/owasp-bwapp
+  - docker pull bkimminich/juice-shop
+  - docker pull citizenstig/owaspbricks
+  - docker pull bltsec/mutillidae-docker
+  
+script:
+  - docker-compose up -d
