@@ -1,3 +1,5 @@
+language: bash
+sudo: required
 services:
   - docker
 
@@ -10,6 +12,6 @@ before_install:
   - docker pull bkimminich/juice-shop
   - docker pull citizenstig/owaspbricks
   - docker pull bltsec/mutillidae-docker
-  
+
 script:
   - docker-compose up -d
