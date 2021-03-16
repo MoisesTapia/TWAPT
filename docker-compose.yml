@@ -1,6 +1,5 @@
 version: '3.7'
 
-
 networks:
     pentesting:
         driver: bridge
@@ -84,7 +83,7 @@ services:
     bricks:
         container_name: bricks
         image: citizenstig/owaspbricks
-        restart: on-failure
+        restart: on-failure 
         ports: 
             - 8084:80
         networks: 
