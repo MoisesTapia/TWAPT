@@ -3,10 +3,8 @@
 
 ![docker](https://img.shields.io/badge/Docker-v19.03.12-blue?style=plastic&logo=docker)
 ![Maintainer](https://img.shields.io/badge/Maintainer-Equinockx-success?style=plastic&logo=terraform)
-
-[![Build Status](https://travis-ci.com/MoisesTapia/TWAPT.svg?branch=deploy)](https://travis-ci.com/MoisesTapia/TWAPT)
-
-
+[![Build Status](https://img.shields.io/badge/Build-success?style=plastic&logo=travis)](https://travis-ci.com/MoisesTapia/TWAPT)
+![Build Status](https://travis-ci.com/MoisesTapia/TWAPT.svg?branch=deploy)
 # Requirements
 
 - [X] Docker
