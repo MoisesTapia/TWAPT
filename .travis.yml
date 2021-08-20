@@ -12,6 +12,7 @@ before_install:
   - docker pull bkimminich/juice-shop
   - docker pull citizenstig/owaspbricks
   - docker pull bltsec/mutillidae-docker
-
+  - docker pull google/cadvisor
 script:
   - docker-compose up -d
+  - docker-compose ps

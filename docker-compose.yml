@@ -16,6 +16,8 @@ services:
         container_name: vulwps
         image: l505/vulnerablewordpress
         restart: on-failure
+        mem_limit: 200m
+        cpus: 0.5
         ports: 
             - 8086:80
             - 3306:3306
@@ -29,6 +31,8 @@ services:
         container_name: ninjaweb
         image: opendns/security-ninjas
         restart: on-failure
+        mem_limit: 200m
+        cpus: 0.5
         ports: 
             - 8899:80
         networks: 
@@ -39,6 +43,8 @@ services:
         container_name: webgoat
         image: webgoat/webgoat-8.0
         restart: on-failure
+        mem_limit: 200m
+        cpus: 0.5
         ports: 
             - 8080:8080
         volumes: 
@@ -51,6 +57,8 @@ services:
         container_name: dvwap
         image: vulnerables/web-dvwa
         restart: on-failure
+        mem_limit: 200m
+        cpus: 0.5
         ports: 
             - 8081:80
         volumes: 
@@ -63,6 +71,8 @@ services:
         container_name: bwapp
         image: feltsecure/owasp-bwapp
         restart: on-failure
+        mem_limit: 200m
+        cpus: 0.5
         ports: 
             - 8082:80
         volumes: 
@@ -75,6 +85,8 @@ services:
         container_name: juiceshop
         image: bkimminich/juice-shop
         restart: on-failure
+        mem_limit: 200m
+        cpus: 0.5
         ports: 
             - 8083:3000
         networks: 
@@ -84,6 +96,8 @@ services:
         container_name: bricks
         image: citizenstig/owaspbricks
         restart: on-failure 
+        mem_limit: 200m
+        cpus: 0.5
         ports: 
             - 8084:80
         networks: 
@@ -93,6 +107,8 @@ services:
         container_name: owasp17
         image: bltsec/mutillidae-docker
         restart: on-failure
+        mem_limit: 200m
+        cpus: 0.5
         ports: 
             - 8088:80
             - 443:443
